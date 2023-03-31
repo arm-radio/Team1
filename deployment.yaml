@@ -1,12 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
+  name: nginx-deployment
   namespace: devops-intermidate
-  labels:
-    app: nginx
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: nginx
@@ -17,7 +15,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: 772990181811.dkr.ecr.us-east-2.amazonaws.com/armradio:latest
+        image: 768722692321.dkr.ecr.us-east-2.amazonaws.com/my-ecr-repo:latest
         ports:
-        - name: http-nginx
-          containerPort: 80
+        - containerPort: 80
