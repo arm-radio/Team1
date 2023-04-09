@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: 772990181811.dkr.ecr.us-east-2.amazonaws.com/armradio:latest
+        image: 772990181811.dkr.ecr.us-east-2.amazonaws.com/armradio:${IMAGE_TAG}
         ports:
         - containerPort: 80
